@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="Stylesheet" type="text/css" href="Styles/ChessStyle.css" />
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="bootstrap/3.3.2/css/bootstrap.min.css" />
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="bootstrap/3.3.2/css/bootstrap-theme.min.css" />
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="Scripts/chessGame.js"></script>
+    <title></title>
+</head>
+<body class="page-bg" onload=" ChessLoad(); ">
+<header><center>
+<h1 class="head-style">Chess with Java Script</h1></center>
+</header>
+<leftaside>
+<div class="leftplayer">
+<div><center><h1 class="playerhead">KingDom:BLUE</h1></center>
+</div>
+<div id="kingblue">
+</div>
+</div>
+</leftaside>
+<center>
+<section  class="session-size">
+
+<article >
+<h1>Instruction Picture</h1>
+<img src="moveinstr.png" class="instr-pic" />
+</article>
+<div class="chessbox">
+<div class="row">
+<label id="ac" class="label-id" >A</label>
+<label id="bc" class=" label-id" >B</label>
+<label id="cc" class="label-id" >C</label>
+<label id="dc" class="label-id" >D</label>
+<label id="ec" class=" label-id">E</label>
+<label id="fc" class="label-id" >F</label>
+<label id="gc" class="label-id" onclick="doclick(0,0);">G</label>
+<label id="hc" class=" label-id" onclick="doclick(0,1);">H</label>
+</div>
+<div class="row">
+<label id="1r" class="label-row-id" >1</label>
+<img  alt="" src="" id="1a" class="label-box" onclick="doclick('1a');" />
+<img  alt="" src="" id="1b" class=" label-box" onclick="doclick('1b');" />
+<img  alt="" src="" id="1c" class="label-box" onclick="doclick('1c');" />
+<img  alt="" src="" id="1d" class="label-box" onclick="doclick('1d');" />
+<img  alt="" src="" id="1e" class=" label-box" onclick="doclick('1e');" />
+<img  alt="" src="" id="1f" class="label-box" onclick="doclick('1f');" />
+<img  alt="" src="" id="1g" class="label-box" onclick="doclick('1g');" />
+<img  alt="" src="" id="1h" class=" label-box" onclick="doclick('1h');" />
+</div>
+<div class="row">
+<label id="2r" class="label-row-id" >2</label>
+<img  alt="" src="" id="2a"  class=" label-box" onclick="doclick('2a');" />
+<img  alt="" src="" id="2b" class=" label-box" onclick="doclick('2b');" />
+<img  alt="" src="" id="2c" class=" label-box" onclick="doclick('2c');" />
+<img  alt="" src="" id="2d"  class=" label-box" onclick="doclick('2d');" />
+<img  alt="" src="" id="2e" class=" label-box" onclick="doclick('2e');" />
+<img  alt="" src="" id="2f" class=" label-box" onclick="doclick('2f');" />
+<img  alt="" src="" id="2g"  class=" label-box" onclick="doclick('2g');" />
+<img  alt="" src="" id="2h" class=" label-box" onclick="doclick('2h');" />
+</div>
+<div class="row">
+<label id="3r" class="label-row-id" >3</label>
+<img  alt="" src="" id="3a" class=" label-box" onclick="doclick('3a');" />
+<img  alt="" src="" id="3b" class="label-box" onclick="doclick('3b');" />
+<img  alt="" src="" id="3c" class="label-box" onclick="doclick('3c');" />
+<img  alt="" src="" id="3d" class=" label-box" onclick="doclick('3d');" />
+<img  alt="" src="" id="3e" class="label-box" onclick="doclick('3e');" />
+<img  alt="" src="" id="3f" class="label-box" onclick="doclick('3f');" />
+<img  alt="" src="" id="3g" class=" label-box" onclick="doclick('3g');" />
+<img  alt="" src="" id="3h" class="label-box" onclick="doclick('3h');" />
+</div>
+<div class="row">
+<label id="4r" class="label-row-id">4</label>
+<img  alt="" src="" id="4a" class=" label-box" onclick="doclick('4a');" />
+<img  alt="" src="" id="4b" class="label-box" onclick="doclick('4b');" />
+<img  alt="" src="" id="4c" class="label-box" onclick="doclick('4c');" />
+<img  alt="" src="" id="4d" class=" label-box" onclick="doclick('4d');" />
+<img  alt="" src="" id="4e" class="label-box" onclick="doclick('4e');" />
+<img  alt="" src="" id="4f" class="label-box" onclick="doclick('4f');" />
+<img  alt="" src="" id="4g" class=" label-box" onclick="doclick('4g');" />
+<img  alt="" src="" id="4h" class="label-box" onclick="doclick('4h');" />
+</div>
+<div class="row">
+<label id="5r" class="label-row-id">5</label>
+<img  alt="" src="" id="5a" class=" label-box" onclick="doclick('5a');" />
+<img  alt="" src="" id="5b" class="label-box" onclick="doclick('5b');" />
+<img  alt="" src="" id="5c" class="label-box" onclick="doclick('5c');" />
+<img  alt="" src="" id="5d" class=" label-box" onclick="doclick('5d');" />
+<img  alt="" src="" id="5e" class="label-box" onclick="doclick('5e');" />
+<img  alt="" src="" id="5f" class="label-box" onclick="doclick('5f');" />
+<img  alt="" src="" id="5g" class=" label-box" onclick="doclick('5g');" />
+<img  alt="" src="" id="5h" class="label-box" onclick="doclick('5h');" />
+</div>
+<div class="row">
+<label id="6r" class="label-row-id">6</label>
+<img  alt="" src="" id="6a" class=" label-box" onclick="doclick('6a');" />
+<img  alt="" src="" id="6b" class="label-box" onclick="doclick('6b');" />
+<img  alt="" src="" id="6c" class="label-box" onclick="doclick('6c');" />
+<img  alt="" src="" id="6d" class=" label-box" onclick="doclick('6d');" />
+<img  alt="" src="" id="6e" class="label-box" onclick="doclick('6e');" />
+<img  alt="" src="" id="6f" class="label-box" onclick="doclick('6f');" />
+<img  alt="" src="" id="6g" class=" label-box" onclick="doclick('6g');" />
+<img  alt="" src="" id="6h" class="label-box" onclick="doclick('6h');" />
+</div>
+<div class="row">
+<label id="7r" class="label-row-id" >7</label>
+<img  alt="" src="" id="7a" class=" label-box" onclick="doclick('7a');" />
+<img  alt="" src="" id="7b" class="label-box" onclick="doclick('7b');" />
+<img  alt="" src="" id="7c" class="label-box" onclick="doclick('7c');" />
+<img  alt="" src="" id="7d" class=" label-box" onclick="doclick('7d');" />
+<img  alt="" src="" id="7e" class="label-box" onclick="doclick('7e');" />
+<img  alt="" src="" id="7f" class="label-box" onclick="doclick('7f');" />
+<img  alt="" src="" id="7g" class=" label-box" onclick="doclick('7g');" />
+<img  alt="" src="" id="7h" class="label-box" onclick="doclick('7h');" />
+</div>
+<div class="row">
+<label id="8r" class="label-row-id" >8</label>
+<img id="8a" alt="" src="" class=" label-box" onclick="doclick('8a');"/>
+<img id="8b" alt="" src=""class="label-box" onclick="doclick('8b');"/>
+<img id="8c" alt="" src=""class="label-box" onclick="doclick('8c');"/>
+<img id="8d" alt="" src=""class=" label-box" onclick="doclick('8d');"/>
+<img id="8e" alt="" src="" class="label-box" onclick="doclick('8e');" />
+<img id="8f" alt="" src=""class="label-box" onclick="doclick('8f');" />
+<img id="8g" alt="" src=""class=" label-box" onclick="doclick('8g');"/>
+<img id="8h" alt="" src="" class="label-box" onclick="doclick('8h');" />
+</div>
+<div id="Result-blog"></div>
+</div>
+
+</section>
+</center>
+
+<rightaside>
+<div class="rightplayer">
+<div><center><h1 class="playerhead">KingDom:GOLD</h1></center>
+</div>
+<div id="kinggold">
+</div>
+</div>
+</rightaside>
+</body>
+</html>

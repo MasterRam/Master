@@ -1,0 +1,26 @@
+<ion-view title="IG-battle">
+    <ion-content padding="'true'" scroll="true" class="has-header">
+        <form class="list" >
+            <ion-toggle toggle-class="toggle-dark">Record</ion-toggle>
+        </form>
+        <div style="border: 1px solid rgb(238, 238, 238); border-radius: 3px; width: 100%; height: auto; background-color: rgb(255, 255, 255);padding-left: 8%;">
+             <ion-list class="chess">
+                <ion-item class="row" ng-repeat="row in chess['data'].board" type="item-text-wrap" >
+                    <ion-item class="boardIcon" ng-repeat="col in row" type="item-text-wrap" >
+                    <ion-content class="" style="width: 35px; height: 37px">
+                        <img ng-src="{{col.data.coin}}" ng-class="{'whitePath': col.isPath&&col.land=='b','blackPath': col.isPath&&col.land=='g','bgBlack':col.land=='g','bgWhite':col.land=='b'}" style="width: 35px; height: 37px" cl ng-click='setPath(col);'>
+                        <!--<img ng-src="{{col.data.kingdom!='e'?col.data.coin:''}}" ng-class="{'path': col.isPath,'bgBlack':col.land=='b','bgwhite':col.land=='g'}" style="width: 35px; height: 37px" cl ng-click='setPath(col);'>-->
+                        <!--<img ng-src="{{col.data.coin}}" ng-class="{'path': col.isPath}" style="width: 35px; height: 37px" ng-click='setPath(col);'>-->
+                    </ion-content> 
+                    </ion-item> 
+                </ion-item>
+            </ion-list>
+        </div>
+        <div class="spacer" style="width: 300px; height: 86px;"></div>
+        <div class="button-bar">
+            <a menu-close="" href="#/menu/lifetime" class="button button-stable button-icon button-block  icon ion-android-alarm-clock"></a>
+            <button class="button button-stable button-icon button-block  icon ion-lock-combination"></button>
+            <a menu-close="" href="#/menu/giveup" class="button button-stable button-icon button-block  icon ion-ios-undo"></a>
+        </div>
+    </ion-content>
+</ion-view>

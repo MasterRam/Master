@@ -1,0 +1,24 @@
+<ion-view title="Signup">
+    <ion-content padding="'true'" scroll="false" class="has-header">
+        <form class="list">
+            <div style="line-height: 250px; border: 1px solid rgb(238, 238, 238); border-radius: 3px; text-align: center; width: 100%; height: auto; background-color: rgb(255, 255, 255);">
+                <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
+            </div>
+            <ion-list>
+                <label class="item item-input">
+                    <span class="input-label">UseName</span>
+                    <input type="text" ng-model="userData.userName" placeholder="">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input type="password" ng-model="userData.Password" placeholder="">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Confirm</span>
+                    <input type="password" ng-model="userData.ConfirmPassword" placeholder="">
+                </label>
+            </ion-list>
+            <a menu-close=""  class="button button-stable button-block " ng-click="signUP.registerUser()">Sign up</a>
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,93 @@
+/* Empty. Add your own CSS if you like */
+ion-header-bar{
+	background-color: #1E90FF!important;
+}
+
+.pad0{
+	padding:0px;
+}
+.pad4{
+	padding: 4px;
+	
+}
+.mh0{
+	min-height: 0px;
+}
+.mw0{
+	min-width: 0px;
+}
+.chess{
+	clear: both;
+}
+	.chess .row{
+		min-height: 0px;
+		min-width: 0px;
+		    width: 375px;
+			
+	}
+	.chess .boardIcon{
+		min-height: 0px;
+		min-width: 0px;
+		width: 37px;
+		height: 37px;
+	}
+	.chess .blackPath{
+			 outline: none;
+    	  	box-shadow: 0 0 10px #1E90FF;
+			    opacity: 0.5;
+	}
+	.chess .whitePath{
+		 background-color: #1E90FF !important;
+		 	 outline: none;
+    		box-shadow: 0 0 10px #1E90FF;
+			    opacity: 0.5;
+	}
+	.chess .item {
+    border-color: #FFF;
+	}
+	.chess .item-toggle,.chess .button-bar
+	{
+		background-color: #1E90FF!important;
+	}
+	.chess .item-complex .item-content, .item-radio .item-content {
+		background-color: #99CDFF;
+	}
+	.chess .item-complex .item-content:hover{
+    background-color: #fff;
+	}
+	.chess .button-stable{
+		border-color: #387ef5;
+		background-color: #1E90FF;
+		color: #fff!important;
+	}
+	
+	.chess .title{
+		color:#fff!important;
+	}
+	.chess.toggle-small .toggle-dark input:checked + .track .handle{
+		background-color: #00366B;
+	}
+	.chess .item-input{
+		background-color: #1E90FF;
+		padding-top: 4px;
+	}
+		.chess .item-input input[type='search']{
+		background-color: #ABD2F9;
+		border-radius: 2px;
+		border-color: #1E90FF!important;
+		padding-left: 5px;
+		line-height: 20px;
+		margin-right: 12px!important;
+		padding-right: 12px;
+		}
+		.chess .item .ion-search {
+			font-size: 23px;
+		line-height: 40px;
+		color: #fff;
+		}
+	.chess .bgBlack{
+		background-color: #000;
+	}
+	.chess .bgWhite{
+		background-color: #fff;
+	}

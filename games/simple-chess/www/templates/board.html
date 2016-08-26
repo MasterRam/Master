@@ -1,0 +1,16 @@
+<ion-view view-title="One">
+  <ion-content>
+    
+    <ion-list class="chess">
+      Current User:{{chess.gameOn}}
+      <ion-item class="row" ng-repeat="row in chess['data'].board" type="item-text-wrap" >
+        <ion-item class="icon" ng-repeat="col in row" type="item-text-wrap" >
+          <ion-content class="pad4" >
+            <img ng-src="{{col.data.coin}}" ng-class="{'path': col.isPath}" style="width: 35px; height: 37px" ng-click='setPath(col);'>
+            <!--{{col.land}}-->
+        </ion-content> 
+        </ion-item> 
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

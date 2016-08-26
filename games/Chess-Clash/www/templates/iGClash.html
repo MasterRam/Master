@@ -1,0 +1,24 @@
+<ion-view title="IG Clash">
+    <ion-content padding="'true'" class="has-header">
+         <div class="spacer" style="width: 300px; height: 30px;"></div>
+        <div style="text-align:center">
+        <img src="img/bpswndwRECVImgW7kclH_Chess-Game.png" width="50%" height="auto" style="width: 50%; height: auto;">
+        </div>
+            <div class="spacer" style="width: 300px; height: 30px;"></div>
+        <form class="list">
+            <ion-list>
+                <label class="item item-input">
+                    <span class="input-label">Username</span>
+                    <input type="text" placeholder="" ng-model="userData.userName" >
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                     <input type="password" placeholder="" ng-model="userData.Password">
+                </label>
+            </ion-list>
+            <div class="spacer" style="width: 300px; height: 15px;"></div>
+            <a menu-close="" class="button button-stable button-block" ng-click="signUP.loginUser()">Log in</a>
+            <a menu-close="" href="#/signup" class="button button-positive button-clear button-block ">Or create an account</a>
+        </form>
+    </ion-content>
+</ion-view>

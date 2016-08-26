@@ -1,0 +1,116 @@
+﻿.page-bg 
+{
+    background-color:Orange;
+}
+.chessbox
+{
+    width:650px;
+    height:600px;
+    clear:both;
+    
+}
+.rox
+{display: table-row;
+    height:75px;
+    width:auto;
+}
+.label-box
+{
+    height:75px;
+    width:75px;
+  
+}
+.label-box:hover
+{
+     height:70px;
+    width:70px;
+}
+.label-id
+{
+    height:30px;
+    width:75px;
+    background-color:Black;
+    color:White;
+}
+.label-row-id
+{    vertical-align: TOP;
+   
+  
+    color:RED;
+    
+}
+.lock-style
+{
+    background-color:Silver;
+    background-image:"chessImage/whiteSol.ico";
+}
+.release-style
+{
+    background-color:none;
+}
+.show-newer
+{
+    border-style:ridge;
+    border-color:Black;
+    border-width:5px;
+    border-radius:10px;
+    width:69px;
+    height:69px;
+}
+.instr-pic
+{
+    height:50px;
+    width:100px;
+    padding:10px;
+}
+.instr-pic:hover
+{
+       height:200px;
+    width:400px;
+}
+.head-style
+{
+    background-color:Silver;
+    border-radius:20px 20px 0px 0px;
+    height:70px;
+}
+.leftplayer
+{
+    
+    float:left;
+    width:20%;
+    height:200px;
+    
+}
+.rightplayer
+{
+   
+    float:left;
+    width:20%;
+    height:200px;
+    
+}
+.session-size
+{
+    float:left;
+    width:60%;
+}
+.playerhead
+{
+    color:White;
+    font-style:italic;
+    font-family:FangSong;
+    
+}
+.rejected-piece
+{
+    width:50px;
+    height:50px;
+    margin:2px;
+}
+.rejected-piece:hover
+{
+    width:100px;
+    height:100px;
+    margin:2px;
+}

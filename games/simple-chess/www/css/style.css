@@ -1,0 +1,38 @@
+/* Empty. Add your own CSS if you like */
+.pad0{
+	padding:0px;
+}
+.pad4{
+	padding: 4px;
+	
+}
+.mh0{
+	min-height: 0px;
+}
+.mw0{
+	min-width: 0px;
+}
+.chess{
+	
+}
+	.chess .row{
+		min-height: 0px;
+		min-width: 0px;
+		    width: 375px;
+			padding-left: 15px;
+	}
+	.chess .icon{
+		min-height: 0px;
+		min-width: 0px;
+		width:45px;
+		height:45px
+	}
+	.chess .path{
+		    border-style: ridge;
+			border-color: Black;
+			border-width: 1px;
+			border-radius: 2px;
+	}
+	.chess .item {
+    border-color: #FFF;
+	}

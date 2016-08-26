@@ -1,0 +1,70 @@
+﻿body {
+}
+.row
+{
+    height:100px;
+    width:350px;
+    margin-top:10px;
+    }
+.label-box
+{
+    width:100px;
+    height:100px;
+}
+.oxbox
+{
+    width:300px;
+    height:300px;
+  
+}
+header
+{
+    background-color:gray;
+}
+.player1
+{
+ background-color:green;   
+ text-align:center;
+ font-size:96px;
+}
+.player2
+{
+    background-color:blue;
+    text-align:center;
+    font-size:96px;
+}
+label:hover
+{
+    background-color:Lime;
+    width:105px;
+    height:105px;
+}
+label
+{
+    background-color:Black;
+    font-size:larger;
+    color:White;
+}
+section
+{
+    padding:30px;
+}
+.Ans-blog-view
+{
+    background-color:Green;
+    border-style:dashed;
+    border-color:Maroon;
+    border-radius:15px;
+    width:150px;
+    height:100px;
+    position:fixed;
+    padding:20px;
+    
+}
+header >h1
+{
+    font-family:Times New Roman Baltic;
+    color:Black;
+    font-size:xx-large;
+    text-align:center;
+}
