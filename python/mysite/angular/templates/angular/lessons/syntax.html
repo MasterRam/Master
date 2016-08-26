@@ -1,0 +1,111 @@
+﻿{% extends "angular/lessons/index.html" %}
+
+{% block content %}
+<div>
+    <br />
+    <h2>Print and Syntax</h2>
+    <h3 class="doToggle">1. Print in Python</h3>
+    <div class="pad10 toggle">
+        print "Hello World!"
+        <br />
+        print "Hello Again"
+        <br />
+        print "Its fleece was white as %s." % 'snow'
+        <br />
+        print "." * 10  # what'd that do?
+        <div class="pad10">
+            <bold>Variables</bold>
+            <br />my_eyes = "Its fleece was white as %s." % 'snow'
+            <br />my_hair = 'Brown'
+            <br />
+            <br />print "\n"
+            <br />print "He's got %s eyes and %s hair." % (my_eyes, my_hair)
+        </div>
+    </div>
+    <h3 class="doToggle">2. Syntax</h3>
+    <div class="pad10 toggle">
+        <h3 class="doToggle">Class and Function</h3>
+        <div class="pad10 toggle">
+            there is no "{" and ";" in python.
+            <br />
+            dependeny is carried out by <bold>indent</bold>.it is more imporatnt in python programing.
+            <br />
+            <bold> eg:</bold>
+            <br />
+            <div class="code">
+                <span class="pad20">class MyStuff(object):</span>
+                <br /><span class="pad40">def __init__(self):</span>
+                <br /><span class="pad60">self.tangerine = "And now a thousand years between"</span>
+                <br />
+                <br /><span class="pad40">def apple(self):</span>
+                <br /><span class="pad60">print "I AM CLASSY APPLES!"</span>
+            </div>
+            <bold> Function/Method eg:</bold>
+            <br />
+            <div class="code">
+                <span class="pad20">def apple():</span>
+                <br /><span class="pad40">print "I AM CLASSY APPLES!"</span>
+            </div>
+            <bold> Class eg:</bold>
+            <br />
+            <div class="code">
+                <span class="pad20">class MyStuff(object):<span class="comments"># Class extends a base class 'object'</span></span>
+                <br /><span class="pad40">def __init__(self):<span class="comments"># constructor for class 'MyStuff'</span></span>
+                <br /><span class="pad60">self.tangerine = "And now a thousand years between"</span>
+                <br />
+                <br /><span class="pad40">def apple(self):<span class="comments"># function parameterized</span></span>
+                <br /><span class="pad60">print "I AM CLASSY APPLES!" <span class="comments"># print the text in double(") quotes</span></span>
+            </div>
+            <br/>
+            <p> Class by default inherites "Old Style" Object class</p>
+            <p> Class like[ Animal(Object): ] inherites "New Style" Object class from version 2.2</p>
+        </div>
+       
+        <h3 class="doToggle">Conditions and Loops</h3>
+        <div class="pad10 toggle">
+            <bold>if else eg:</bold>
+            <br />
+            <div class="code">
+                <span class="pad20">if cars > people:</span>
+                <br /><span class="pad40">print "We should take the cars."</span>
+                <br /><span class="pad20">elif cars < people:</span>
+                <br /><span class="pad40">print "We should not take the cars."</span>
+                <br /><span class="pad20">else:</span>
+                <br /><span class="pad40">print "We can't decide."</span>
+            </div>
+            <br />
+            <p>No Switch case in python instead here it use Dictionary Mapping,it is faster than switch case.</p>
+            <bold>For loop eg:</bold>
+            <br />
+            <div class="code">
+                <span class="pad20">elements = []</span>
+                <br /><span class="pad20">for i in range(0, 6):</span>
+                <br /><span class="pad40">print "Adding %d to the list." % i</span>
+                <br /><span class="pad40"><span class="comments"># append is a function that lists understand</span></span>
+                <br /><span class="pad40">elements.append(i)</span>
+                <br />
+                <br /><span class="pad40"><span class="comments"># now we can print them out too</span></span>
+                <br /><span class="pad20">for i in elements:</span>
+                <br /><span class="pad40"> print "Element was: %d" % i</span>
+            </div>
+            <bold>While loop eg:</bold>
+            <br />
+            <div class="code">
+                <span class="pad20">numbers = []</span>
+                <br /><span class="pad20">i = 0</span>
+                <br /><span class="pad20">while i < 6:</span>
+                <br /><span class="pad40">print "At the top i is %d" % i</span>
+                <br /><span class="pad40"><span class="comments"># append is a function that lists understand</span></span>
+                <br /><span class="pad40">numbers.append(i)</span>
+                <br /><span class="pad40">i = i + 1</span>
+                <br /><span class="pad40">print "Numbers now: ", numbers</span>
+                <br /><span class="pad40">print "At the bottom i is %d" % i</span>
+                <br />
+                <br /><span class="pad40"><span class="comments"># now we can print them out too</span></span>
+                <br /><span class="pad20">for i in numbers:</span>
+                <br /><span class="pad40"> print i</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

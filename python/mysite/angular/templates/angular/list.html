@@ -1,0 +1,17 @@
+ {% extends "angular/index.html" %}
+ 
+{% block content %}
+<div class="grid action h50p"><a class="float-right button" href="/0/edit/">Add</a></div>
+<table class="grid mrt20">
+    <tr class="row"><th class="center" >S.No</th><th>Name</th><th >Age</th><th >Job Title</th><th >Date of Join</th><th colspan="2" class="center">Action</th></tr>
+    {% if recent_employee_list %}
+
+    {% for question in recent_employee_list %}
+    <tr class="row"><td class="center"><a href="/{{ question.id }}/edit">{{ question.id }}</a></td><td>{{ question.name }}</td><td>{{ question.age }}</td><td>{{ question.job_title }}</td><td>{{ question.join_date }}</td><td class="center"> <a href="/{{ question.id }}/edit/">Edit</a></td><td class="center"> <a href="/{{ question.id }}/delete" >Delete</a></td></tr>
+    {% endfor %}
+
+    {% else %}
+    <td class="col-md-12 error">No Employee are available.</td>
+    {% endif %}
+</table>
+{% endblock %}

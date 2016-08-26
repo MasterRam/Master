@@ -1,0 +1,174 @@
+﻿ {% extends "angular/lessons/index.html" %}
+
+ {% block content %}
+
+<div>
+    <br />
+    <h2>View exist in views.py inside your app</h2>
+    <p class="doToggle">Django is a framework for web development in Python.It supports MVC pattern</p>
+
+    <br />
+    <div class="pad10">
+        <h3 class="doToggle">1. First View</h3>
+        <div class="toggle pad10">
+            <h3 class="doToggle">a. Creating View</h3>
+            <div class="toggle pad10">
+                <p>place below code in "/polls/views.py"</p>
+                <div class="code">
+                    <span class="pad20">from django.http import HttpResponse</span>
+                    <br />
+                    <span class="pad20">def index(request):</span>
+                    <br />
+                    <span class="pad40">return HttpResponse("Hello, you are good to go!")</span>
+                </div>
+            </div>
+            <h3 class="doToggle">b. Set Url for the view</h3>
+            <div class="toggle pad10">
+                <p>place below code in "/polls/urls.py"</p>
+                <div class="code">
+                    <span class="pad20">from django.conf.urls import url</span>
+                    <br />
+                    <span class="pad20">from . import views</span>
+                    <br />
+                    <span class="pad20">urlpatterns = [</span>
+                    <br />
+                    <span class="pad40">url(r'^$', views.index, name='index'),</span>
+                    <br />
+                    <span class="pad20">]</span>
+                </div>
+            </div>
+        </div>
+        <h3 class="doToggle">2. configure Installed app in settings</h3>
+        <div class="toggle pad10">
+            <h3 class="doToggle">a. Point the root URL to polls.urls</h3>
+            <div class="toggle pad10">
+                <p>place below code in "/mysite/url.py"</p>
+                <div class="code">
+                    <span class="pad20">from django.conf.urls import include, url</span>
+                    <br />
+                    <span class="pad20">from django.contrib import admin</span>
+                    <br />
+                    <span class="pad20">urlpatterns = [</span>
+                    <br />
+                    <span class="pad40">url(r'^polls/', include('polls.urls')),</span>
+                    <br />
+                    <span class="pad40">url(r'^admin/', admin.site.urls),</span>
+                    <br />
+                    <span class="pad20">]</span>
+                </div>
+                <br />
+                <p>You have now wired an index view into the URLconf.</p>
+                <p>run the server</p>
+                <div class="code cmd">
+                    <span class="pad20">python manage.py runserver</span>
+                </div>
+                <br />
+                <p>visit <a href="http://localhost:8000/polls/">http://localhost:8000/polls/</a> </p>
+            </div>
+            <h3 class="doToggle">b. Tell the server that your app "polls" is installed in your project,so that you can render view from .html ,you can use base html(layout) and static files(css,js and images)</h3>
+            <div class="toggle pad10">
+                <p>craete "/polls/apps.py"</p>
+                <div class="code">
+                    <span class="pad20">from django.apps import AppConfig</span>
+                    <br />
+                    <span class="pad20">class PollsConfig(AppConfig):</span>
+                    <br />
+                    <span class="pad40"> name = 'polls'</span>
+                    <br />
+                    <span class="pad40">verbose_name = "polls"</span>
+                </div>
+                <br />
+                <p>You have a config file that can be refer to your project in /mysite/settings.py </p>
+                <br />
+                <div class="code">
+                    <span class="pad20">INSTALLED_APPS = (</span>
+                    <br />
+                    <span class="pad40">'polls.apps.PollsConfig',</span>
+                    <br />
+                    <span class="pad40">.</span>
+                    <br />
+                    <span class="pad40">.</span>
+                    <br />
+                    <span class="pad40">.</span>
+                    <br />
+                    <span class="pad20">)</span>
+                </div>
+                <br />
+            </div>
+        </div>
+        <h3 class="doToggle">3. Template</h3>
+        <div class="toggle pad10">
+            <p>Create "/polls/templates/polls/index.html" with your html content in the specified path.</p>
+            <p>Modify '/polls/views.py' as below</p>
+            <br />
+            <div class="code">
+                <span class="pad20">from django.http import HttpResponse</span>
+                <br/>
+                <span class="pad20">from django.template import loader</span>
+                <br />
+                <br />
+                <span class="pad20">def index(request):</span>
+                <br />
+                <span class="pad40">template = loader.get_template('polls/index.html')</span>
+                <br />
+                <span class="pad40">return HttpResponse(template.render(request))</span>
+            </div>
+            <br />
+            <p>visit <a href="http://localhost:8000/polls/">http://localhost:8000/polls/</a> </p>
+        </div>
+        <h3 class="doToggle">4. Static Files</h3>
+        <div class="toggle pad10">
+            <p> Place all your js,css,images inside directory "/polls/static/polls/"</p>
+            <p> Check /mysite/settings.py contains below code.</p>
+            <br />
+            <div class="code">
+                <span class="pad20">STATIC_URL = '/static/'</span>
+            </div>
+            <br />
+            <p>In index.html at top place below code</p>
+            <br />
+            <div class="code">
+                <span class="pad20">&#123;&#37; load staticfiles &#37;&#125;</span>
+                
+            </div>
+            <br />
+            <p>
+                Now you can refer the js, css, image as below
+                <div class="code">
+                    <span class="pad20 comments">< !--CSS reference -- ></span>
+                    <br/><span class="pad20">< link rel="stylesheet" href="/static/polls/styles/style.css " type="text/css" media="screen" /></span>
+                    <br/><span class="pad20 comments">< !--Js reference -- ></span>
+                    <br/><span class="pad20">< script type="text/javascript" src="/static/polls/scripts/app.js"> </ script></span>
+                    <br/><span class="pad20 comments">< !--Image reference -- ></span>
+                    <br/><span class="pad20">< img src="/static/polls/images/python.gif" alt="MVC structure" /></span>
+                </div>
+            </p>
+            <br />
+        </div>
+        <h3 class="doToggle">5. Layout</h3>
+        <div class="toggle pad10">
+            <p>Create Layout page in "/templates/polls/layout.html" and refer all your css and js here.</p>
+            <p>To render any content inside layout</p>
+            <p>place below code in layout.html where you need to render</p>
+            <br />
+            <div class="code">
+                <span class="pad20 comments">< !-- content is the name of the block -- ></span>
+                <br /><span class="pad20">&#123;&#37; block content &#37;&#125;</span>
+                <br />
+                <span class="pad20">&#123;&#37; endblock &#37;&#125;</span>
+            </div>
+            <p>wrap the content in "/templates/polls/index.html" with below code.</p>
+            <div class="code">
+                <span class="pad20 comments">< !-- Place it in top of the page -- ></span>
+                <br /><span class="pad20">&#123;&#37; extends "polls/layout.html" %}</span>
+                <br /><span class="pad20 comments">< !-- content is the name of the block same as in layout-- ></span>
+                <br /><span class="pad20">&#123;&#37; block content &#37;&#125;</span>
+                <br /><span class="pad20">< div >.....< /div></span>
+                <br /><span class="pad20">&#123;&#37; endblock &#37;&#125;</span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,93 @@
+﻿{% extends "angular/lessons/index.html" %}
+
+{% block content %}
+<div>
+    <br />
+    <h2 >Django Introduction</h2>
+    <p class="doToggle">Django is a framework for web development in Python.It supports MVC pattern</p>
+    <div class="toggle center divide">
+        <div class="half">
+            <h2>Django framework</h2>
+            <img src="/static/angular/images/django_mvc.png" alt="Django framework" />
+        </div>
+        <div class="half">
+            <h2>Django MVC structure</h2>
+            <img class="h43p" src="/static/angular/images/architecture.jpg" alt="MVC structure" />
+        </div>
+    </div>
+    <br/>
+    <div class="pad10">
+        <h3 class="doToggle">1. Django’s cache framework</h3>
+        <div class="toggle pad10">
+            A fundamental trade-off in dynamic websites is, well, they’re dynamic. Each time a user requests a page, the Web server makes all sorts of calculations – from database queries to template rendering to business logic – to create the page that your site’s visitor sees. This is a lot more expensive, from a processing-overhead perspective, than your standard read-a-file-off-the-filesystem server arrangement.
+            <br />
+            <br />That’s where caching comes in.
+            <br />
+            <br />To cache something is to save the result of an expensive calculation so that you don’t have to perform the calculation next time. Here’s some pseudocode explaining how this would work for a dynamically generated Web page:
+        </div>
+        <h3 class="doToggle">2. URL Dispatcher,Model,view,templates,database</h3>
+        <div class="toggle pad10">
+            URL Dispatcher handles request and invoke respective view. 
+            <br />
+            <br />Templates are html files
+            <br />
+            <br />Models which helps to handle Database.
+            <br />
+            <br />Django by default use sqllite3 as DB, and also it support postgresql,mysql
+        </div>
+        <h3 class="doToggle">3. Installation</h3>
+        <div class="toggle pad10">
+            Type below command in CMD.you should have preinstalled pip in your system.
+            <div class="code cmd">
+                <span class="pad20"><a href="https://docs.djangoproject.com/en/1.9/howto/windows/">pip install django</a></span>
+            </div>
+        </div>
+        <h3 class="doToggle">4. Start New Web Project</h3>
+        <div class="toggle pad10">
+            <p>Django project can contain number of apps inside for different purpose.</p>
+            <p>Navigate to your directory to create project and execute below command to create project.</p>
+            <p><bold>django-admin startproject < project_name ></bold></p>
+            <div class="code cmd">
+                <span class="pad20">django-admin startproject mysite</span>
+            </div>
+            <p>you can see below folder structure created inside folder "mysite"</p>
+            <div class="center">
+                <img class="h43p" src="/static/angular/images/folder_str.png" alt="MVC structure" />
+            </div>
+            <p>To run the Project</p>
+            <div class="code cmd">
+                <span class="pad20">cd mysite</span>
+                <span class="pad20">python manage.py runserver</span>
+            </div>
+            <br/>
+            <p>Now server is running, visit: <a href=" http://127.0.0.1:8000"> http://127.0.0.1:8000</a> </p>
+            <br/>
+            <p>You can change port by </p>
+            <div class="code">
+                <span class="pad20"> python manage.py runserver 8000</span>
+            </div>
+            <p>If you want to change the server’s IP, pass it along with the port.</p>
+            <div class="code">
+                <span class="pad20"> python manage.py runserver 0.0.0.0:8000</span>
+            </div>
+
+        </div>
+        <h3 class="doToggle">5. Create app</h3>
+        <div class="toggle pad10">
+            <p>Django project can contain number of apps inside for different purpose.</p>
+            <p>Check you are in the directory where manage.py exist.</p>
+            <p>
+                <bold>python manage.py startapp < app_name ></bold>
+                <div class="code cmd">
+                    <span class="pad20">python manage.py startapp polls</span>
+                </div>
+            <p>you can see below app folder structure created.</p>
+            <div class="center">
+                <img class="h43p" src="/static/angular/images/app_str.png" alt="MVC structure" />
+            </div>
+           
+        </div>
+
+    </div>
+</div>
+{% endblock %}

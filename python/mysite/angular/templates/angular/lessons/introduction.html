@@ -1,0 +1,189 @@
+﻿{% extends "angular/lessons/index.html" %}
+
+{% block content %}
+<div>
+    <br />
+    <h2>1. Introduction</h2>
+    <p>A high-level general-purpose programming language.</p>
+
+
+    <h2> 2. Why named Python</h2>
+    <p>The language is named after <bold>the BBC show “Monty Python’s Flying Circus” by Van Rossum</bold> and has nothing to do with reptiles. Making references to Monty Python skits.</p>
+    <h2 class="doToggle">3. Why Python</h2>
+    <div class="toggle">
+        <p>Python are paying more, but jobs are found in only 8 - 9 percent.Developers are found in only 6-8 percent.</p>
+        <ul>
+            <li>
+                Many applications use Python as an embedded scripting language. For example, 3D sofrware like <bold>Maya</bold>
+            </li>
+            <li>Task automating purpose</li>
+            <li>
+                Python is also very popular in web development.
+                <ul>
+                    <li>YouTube</li>
+                    <li> Pinterest</li>
+                    <li>Quora</li>
+                    <li>Instagram</li>
+                    <li>Reddit</li>
+                    <li>NASA</li>
+                    <li>Dropbox</li>
+                </ul>
+            </li>
+            <li>
+                Python is used for support applications round the main task.One might be writing C++ or Java, but need a little program to do something useful in low cost.
+
+            </li>
+            <li>Python really shines in are data science and machine learning.</li>
+            <li>
+                Game Developmen posiible by puthon libraries like Pygame, Cocos2d, PyOpenGL, Panda3D
+            </li>
+        </ul>
+    </div>
+    <h2 id='bitc' class="doToggle">4. Interpreters, Translators and Compilers</h2>
+    <div id='itc' class="toggle" title="Interpreters, Translators and Compilers">
+        <dl>
+            <dt><a href="http://pyjs.org/">Pyjs</a></dt>
+            <dd>
+                <p>
+                    Those who prefer to code their programs in Python, and yet want to write programs that are executed in a web browser
+                    can now do so with this compiler. Pyjs (formerly "Pyjamas") is a Python to JavaScript translator; that is, it translates
+                    your Python code into its JavaScript equivalent so that your program can run in a web browser. It comes with an
+                    <a href="http://www.thefreecountry.com/webmaster/ajax.shtml" target="_top">AJAX</a> framework and a Widget Set API.
+                    The AJAX framework is intended to handle the differences between JavaScript and DOM support between the different
+                    browsers so that you don't have to worry about that in your program.
+                </p>
+            </dd>
+
+            <dt><a href="http://www.python.org/">Python</a> (CPython)</dt>
+            <dd>
+                <p>
+                    Python is an interpreted object-oriented programming language with many adherents on the Net.
+                    To quote from the Python FAQ, "it incorporates modules, exceptions, dynamic typing,
+                    very high level dynamic data types, and classes." It supports numerous versions of Unices
+                    (including, of course, Linux), Windows, Mac, OS/2 and even MSDOS. This version of Python,
+                    often known as CPython because it was written in
+                    <a href="http://www.thefreecountry.com/compilers/cpp.shtml" target="_top">C</a> (another
+                    programming language), is the reference implementation of the language. It's also probably the
+                    most widely used.
+                </p>
+            </dd>
+
+            <dt><a href="http://www.skulpt.org/">Skulpt</a></dt>
+            <dd>
+                <p>
+                    For those who need to write browser-based programs (client-side; that is, programs that run in your visitor's web browser itself)
+                    but don't want to use JavaScript, Skulpt may be your cup of tea. It allows you to write your programs in Python, place them as
+                    <code>.py</code> files on your site, import them from your page, and let the Skulpt Python interpreter execute them. The interpreter
+                    itself is written in JavaScript, and it is released under either the MIT or the PSFL v2 licence (probably at your option).
+                </p>
+            </dd>
+
+            <dt><a href="http://wiki.python.org/jython/">Jython</a></dt>
+            <dd>
+                <p>
+                    Jython compiles your Python code to Java byte codes, allowing your Python program to run on any system that has a
+                    <a href="http://www.thefreecountry.com/programming/javatools.shtml#jvm" target="_top">Java runtime</a> installed. It supports
+                    both static and dynamic compilation. Your Python code can also extend any Java classes. Since this Python implementation is itself
+                    written in Java, it runs on any platform supporting the Java virtual machine.
+                </p>
+            </dd>
+
+            <dt><a href="http://www.codeplex.com/IronPython">IronPython</a></dt>
+            <dd>
+                <p>
+                    IronPython implements the Python programming language on the Microsoft .NET framework. It supports dynamic compilation, has an
+                    interactive console, and your Python scripts can interact with .NET objects. It is licensed under the Microsoft Public License.
+                </p>
+            </dd>
+
+            <dt><a href="http://www.stackless.com/">Stackless Python</a></dt>
+            <dd>
+                <p>
+                    Stackless Python enhances the Python programming language to include support for threads, or specifically, microthreads. It
+                    provides tasklets that can wrap functions that you wish to be launched as microthreads. Also available are channels that
+                    allow bidirectional communications between your tasklets, a round-robin scheduling facility, and serialisation. Precompiled binaries
+                    (executables) for <a href="http://www.thefreecountry.com/operating-systems/windows-clones.shtml" target="_top">Windows</a> and Mac OS X
+                    are available. If you use <a href="http://www.thefreecountry.com/operating-systems/linux-distributions.shtml" target="_top">Linux</a>
+                    or some other Unix variant, you can simply download the source code and compile it yourself. This implementation of Python is apparently
+                    used in some multiplayer online games (like EVE Online and Second Life).
+                </p>
+            </dd>
+
+            <dt><a href="http://code.google.com/p/shedskin/">Shed Skin - Optimizing Python to C++ Compiler</a></dt>
+            <dd>
+                <p>
+                    Shed Skin compiles your python code to C++. At the time this is written, Shed Skin requires that your Python code be statically typed,
+                    that is, your variables should only have a single type. Moreover, not all standard library modules are supported (yet). The compiler
+                    is released under the GNU GPL.
+                </p>
+            </dd>
+
+            <dt><a href="http://www.py2exe.org/">py2exe - Python to Windows EXE</a></dt>
+            <dd>
+                <p>
+                    py2exe converts your Python programs to standalone Windows executables that can run without your users needing to install Python.
+                    Note that this is not a native code compiler - your code is still interpreted. py2exe merely provides all the necessary pieces so that
+                    when your end users double-click on your executable, the Python interpreter will start up to interpret your code. py2exe is released
+                    under the Mozilla Public License.
+                </p>
+            </dd>
+
+            <dt><a href="http://www.activestate.com/activepython/downloads">ActivePython</a></dt>
+            <dd>
+                <p>
+                    ActivePython is a Python distribution for Windows, Linux and Mac OS X. Note that only the Community Edition is
+                    free.
+                </p>
+            </dd>
+        </dl>
+        <h3>
+            To know compiler we use
+        </h3>
+
+        <div class="code cmd">
+            <span class="pad20">$ python</span>
+            <br /><span class="pad20"></span>
+            <br /><span class="pad20">>>> import sys</span>
+            <br /><span class="pad20"> >>> print(sys.version)</span>
+            <br /><span class="pad20">2.7.10 (default, May 23 2015, 09:40:32) [MSC v.1500 32 bit (Intel)]</span></span>
+        </div>
+    </div>
+
+
+    <h2 class="doToggle">
+        5. Required Software
+    </h2>
+    <div class="toggle">
+        Available Version
+        <ul>
+            <li>
+                <bold>Python</bold>
+                <ul>
+                    <li><bold>Python 2.7.x</bold>[Currently used but it will be stopped in near future, 2.7 is last version in 2.x]</li>
+                    <li><bold>Python 3.x.x</bold>[Syntax differs from 2.x and also difficult to learn without knowing 2.x]</li>
+                </ul>
+            </li>
+            <li>
+                <bold>pip</bold>
+                <p>It is default in 2.7.x</p>
+                <br />
+                <p>It is is a package manager for python</p>
+            </li>
+        </ul>
+
+        My suggestion is to learn in 2.7.x and then proceed to 3.x for beginners.
+        <br />
+        <br />
+        Install the software and set the installation path to PATH environment variable;
+        <br />
+        if "C:\Python27" is your installation path then
+        <br />
+        add "C:\Python27;" and "C:\Python27\Scripts;" in PATH variable
+        <br />
+        in cmd
+        <br />
+        set PATH=%PATH%;C:\Python27;C:\Python27\Scripts;
+    </div>
+
+</div>
+{% endblock %}

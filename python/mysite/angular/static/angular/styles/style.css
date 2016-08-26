@@ -1,0 +1,141 @@
+body {
+    display: block;
+    color: black;
+    font: caption;
+    padding: 30px;
+    background-color: #00ff90;
+    border-radius: 5px;
+}
+
+    body h1 {
+        border-radius: 10px;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 10px;
+    }
+
+li a {
+    color: green;
+}
+
+.grid {
+    width: 70%;
+    margin-left: 15%;
+    border: solid;
+    border-width: 0px 1px 0px 1px;
+}
+.form{
+       width: 30%;
+    margin-left: 35%;
+    border: solid;
+    border-width: 0px 1px 0px 1px;
+    height:120px;
+}
+    .grid .row {
+        width: 100%;
+    }
+
+    .grid .col {
+        width: auto;
+        min-width: 40px;
+        float: left;
+    }
+
+.center {
+    text-align: center;
+}
+
+bold {
+    font-weight: 700;
+}
+
+.label {
+    width: 300px;
+    display: block;
+    color: black;
+    font: caption;
+    float: left;
+    text-align: right;
+}
+
+.fields {
+    float: left;
+    /*width:50px;*/
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-none {
+    float: none;
+}
+
+.action {
+    display: block;
+    padding: 10px;
+    line-height: 2px;
+}
+
+.button {
+    border: solid;
+    padding: 3px;
+    border-radius: 5px;
+    background-color: gray;
+    border-color: gray;
+    color: white;
+    line-height: 15px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+.h50p {
+    height: 50px;
+}
+
+.h60p {
+    height: 60%;
+}
+
+.mrt20 {
+    margin-top: 30px;
+}
+
+.menu {
+    display: block;
+    border: solid;
+    max-width: 200px;
+    padding: 5px;
+    text-align: center;
+    border-width: 1px;
+    border-bottom-width: 0px;
+    float: left;
+    margin-right: 5px;
+}
+.menu-content .float-right{
+    float:right;
+}
+    .menu:hover {
+        background-color: #428bca;
+        color: #00FF90;
+        border-color: #428bca;
+        text-decoration: none;
+    }
+
+.header a {
+    color: #073108;
+}
+
+    .header a:hover {
+        color: green;
+        text-decoration: none;
+    }
+
+.br30 {
+    border-radius: 30px;
+}

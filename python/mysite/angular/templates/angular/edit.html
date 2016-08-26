@@ -1,0 +1,19 @@
+ {% extends "angular/index.html" %}
+ {% block content %}
+    
+    <div class="form">
+   
+    {% if employee %}
+        <div stule="display:none"><input id="id" type="hidden" value="{{employee.id}}"/></div>
+
+        <div class="label">Name : </div><div class="fields"><input id="name" type="text" value="{{employee.name}}"/></div>
+        <div class="label">Age : </div><div class="fields"><input id="age" type="text" value="{{employee.age}}" /></div>
+        <div class="label">Position : </div><div class="fields"><input id="job_title" type="text" value="{{employee.job_title}}"/></div>
+        <div class="label">Date of Join : </div><div class="fields"><input id="join_date" type="text" value="{{employee.join_date}}"/></div>
+    
+        <!--<tr class="row"><td class="col"><a href="/{{ question.id }}/">{{ question.id }}</a></td><td class="col">{{ question.name }}</td><td class="col">{{ question.join_date }}</td></tr>
+     -->
+    {% endif %}
+    </div>
+   <div class="action float-none center"><a href="/employee/" class="button" ng-click="">Cancel</a><button id='button' class="button" ng-click="">Save</button></div>
+{% endblock %}
