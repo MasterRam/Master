@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "angular-local-storage": "~0.2.3",
-    "ngCordova": "~0.1.23-alpha"
+    "ngCordova": "~0.1.23-alpha",
+    "angular-signalr-hub": "^1.6.2"
   }
 }
