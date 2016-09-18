@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <style>
+
+    </style>
+    <script data-require="angular.js@1.2.7" data-semver="1.2.7" src="http://code.angularjs.org/1.2.7/angular.js"></script>
+    <script src="vendor.js"></script>
+    <script src="app.js"></script>
+    <script src="default.js"></script>
+    
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="style.css" rel="stylesheet" />
+    <link href="app.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
+    <!--<script src="vendor.js"></script>-->
+    <!--<script src="angular-drag-drop.min.js"></script>-->
+    <!--<script src="app.js"></script>-->
+
+</head>
+
+<body md-theme="{{'default'}}" md-theme-watch>
+    <!--<h1>Starter AngularJS app</h1>-->
+    <div ng-controller="MainController" flex layout="row">
+
+        <div class="container" flex>
+            <header name="body">
+                <h1>Drop Schtuff Here</h1>
+            </header>
+
+            <droppable droppable="body" layout="{{body.layout}}" ng-click="selectObject(body);">
+                <div id="{{'one'+$index}}" ng-repeat="item in body.childElements track by $index">
+
+                    <bind-data bind-data="item"></bind-data>
+                   
+                </div>
+
+            </droppable>
+        </div>
+        <div class="container draggables" flex-30 >
+            <header>
+                <h1>Draggables : {{showProperty}}</h1>
+            </header>
+            <section layout="row" ng-if="!showProperty">
+                <div flex>
+                    <div draggable="true" drag-type="{{drag_type.name}}" " ng-repeat="drag_type in drag_types ">{{drag_type.name}}</div>
+                </div>
+                  <div flex-20 layout="column" class="RightMenu">
+               <md-button class="md-raised md-primary" ng-click="return();"><i class="material-icons">dashboard</i></i></md-button>
+                 <md-button class="md-raised md-primary" ng-click="return();"><i class="icon icon-brush s40"></i></md-button>
+                  <md-button class="md-raised md-primary" ng-click="return();"><i class="icon icon-brush s40"></i></md-button>
+                     </div>
+            </section>
+          <section ng-if="showProperty">
+              <!--<input type="checkbox" ng-model="selectedobject.layout">-->
+              <select ng-model="selectedobject.layout">
+            <option><em>None</em></md-option>
+            <option ng-value="row">row</md-option>
+            <option ng-value="column">column</md-option>
+            
+           
+          </select>
+               <md-button class="md-raised md-primary" ng-click="return();">Primary</md-button>
+          </section>
+        </div>
+    </div>
+  
+   
+    <pre>{{items|json}}</pre>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+ .draggables div{
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+       body div{
+         min-height: 100%;
+        }
+         body div div{
+             min-height:min-content;
+         } 
+        /*.pink {
+            min-height: 41px;
+            min-width: 88px;
+            background-color: pink;
+        }
+        
+        .green {
+            min-height: 41px;
+            min-width: 88px;
+            background-color: green;
+        }
+        
+        .yellow {
+            min-height: 41px;
+            min-width: 88px;
+            background-color: yellow;
+        }
+        
+        .black {
+            min-height: 41px;
+            min-width: 88px;
+            background-color: brown;
+        }*/
+        
+        .container {
+            /*width: 600px;
+            border: 1px solid #CCC;
+            box-shadow: 0 1px 5px #CCC;
+            border-radius: 5px;
+            font-family: verdana;
+            margin: 25px auto;*/
+        }
+        
+        .container header {
+            background: #f1f1f1;
+            background-image: -webkit-linear-gradient( top, #f1f1f1, #CCC);
+            background-image: -ms-linear-gradient( top, #f1f1f1, #CCC);
+            background-image: -moz-linear-gradient( top, #f1f1f1, #CCC);
+            background-image: -o-linear-gradient( top, #f1f1f1, #CCC);
+            box-shadow: 0 1px 2px #888;
+            padding: 10px;
+        }
+        
+        .container h1 {
+            padding: 0;
+            margin: 0;
+            font-size: 16px;
+            font-weight: normal;
+            text-shadow: 0 1px 2px white;
+            color: #888;
+            text-align: center;
+        }
+        
+        .container section {
+            padding: 10px 10px 10px 10px;
+            font-size: 12px;
+            line-height: 175%;
+            color: #333;
+        }
+ form,section{
+            width:100%;
+            height: 100%;
+        }
+        form{
+            background-color: rgba(226, 23, 192, 0.55);
+        }
+        section
+        {
+            background-color: rgba(95, 234, 196, 0.55)
+        }
+        
+
+        md-content{
+            /*min-height: 300px;*/
+            /*height: 300px;*/
+        }
+        .transform-right{
+            
+/* Safari */
+-webkit-transform: rotate(-90deg);
+
+/* Firefox */
+-moz-transform: rotate(-90deg);
+
+/* IE */
+-ms-transform: rotate(-90deg);
+
+/* Opera */
+-o-transform: rotate(-90deg);
+
+/* Internet Explorer */
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+                border: none;
+    padding: 0px;
+    margin-left: 0px;
+    padding-top: 40px;
+        }
+        md-toolbar{
+            background-color: #273
+        }
+        droppable{
+            display: block;
+            height: 100%;
+            border-style: dashed;
+    border-color: rgba(0, 0, 0, 0.48);
+    border-width: 2px;
+    border-radius: 10px;
+    padding: 5px;
+        }
+        [droppable="body"]
+        {
+            height: 100%;
+            background-color: rgba(124, 169, 228, 0.45);
+                overflow: auto;
+    max-height: 600px;
+        }
+        droppable::hover
+        {
+            border-style: dotted ;
+             background-color: rgba(255, 0, 0, 0.55);
+            border-width: 2px;
+        }
+        .thick-Border{
+            border-color: brown ;
+            border-width: 1px;
+            border-style: dashed;
+        }
+        #RightMenu {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    z-index: 10;
+}
+.RightMenu .Tabs,  {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    list-style: none;
+}
+.RightMenu .Tabs {
+    position: absolute;
+    white-space: nowrap;
+    top: 0;
+    right: 100%;
+    text-align: right;
+    -webkit-transform-origin: 100% 100%;
+    -webkit-transform: rotate(-90deg);
+    transform-origin: 100% 100%;
+    transform: rotate(-90deg);
+}
+.RightMenu .Tabs > li {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid black;
+    border-bottom: none;
+}
+bind-data
+{
+        width: 100%;
+    display: block;
+}
+bind-data input{
+    width: 100%;
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+
+}
+[ng-repeat]
+{
+    width:100%;
+}
+md-button{
+    border-radius: 3px;
+    background-color: burlywood;
+    padding: 5px;
+    margin:5px;
+        text-align: center;
+    vertical-align: middle;
+}
